@@ -10,7 +10,7 @@ const UpcomingSalaryPayments = () => {
       department: "Engineering",
       phone: "+1234567890",
       salary: 5000,
-      paymentDate: "2025-03-11",
+      paymentDate: "2025-03-13",
       status: "Unpaid",
     },
     {
@@ -19,7 +19,7 @@ const UpcomingSalaryPayments = () => {
       department: "Marketing",
       phone: "+9876543210",
       salary: 4200,
-      paymentDate: "2025-03-09",
+      paymentDate: "2025-03-13",
       status: "Unpaid",
     },
     {
@@ -28,7 +28,7 @@ const UpcomingSalaryPayments = () => {
       department: "HR",
       phone: "+1122334455",
       salary: 3800,
-      paymentDate: "2025-03-10",
+      paymentDate: "2025-03-13",
       status: "Unpaid",
     },
   ];
