@@ -83,14 +83,21 @@ const UpcomingSalaryPayments = () => {
   ];
 
   return (
-    <div className="mt-6 shadow-lg">
-      <Table
-        columns={columns}
-        dataSource={upcomingPayments}
-        rowKey="key"
-        locale={{ emptyText: "No upcoming salary payments." }}
-        pagination={false}
-      />
+    <div className="mt-6">
+      <div className="md:h-20 flex gap-4 md:items-center items-start flex-col md:flex-row justify-between">
+        <h1 className="text-[22px] md:text-3xl font-bold text-textColor">
+          Upcoming payments
+        </h1>
+      </div>
+      <div className="shadow-lg">
+        <Table
+          columns={columns}
+          dataSource={upcomingPayments}
+          rowKey="key"
+          locale={{ emptyText: "No upcoming salary payments." }}
+          pagination={false}
+        />
+      </div>
     </div>
   );
 };
