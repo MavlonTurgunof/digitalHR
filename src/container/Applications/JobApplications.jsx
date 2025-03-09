@@ -61,12 +61,17 @@ const JobApplications = () => {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold mb-4">Job Applications</h1>
+      <div className="md:h-20 flex gap-4 md:items-center items-start flex-col md:flex-row justify-between mb-[30px]">
+        <h1 className="text-[22px] md:text-3xl font-bold text-textColor">
+          Job applications
+        </h1>
+      </div>
       <div className="flex gap-4 mb-4">
         <Select
           placeholder="Select Vacancy"
           onChange={handleVacancyChange}
           className="w-1/3"
+          allowClear
         >
           {jobVacancies.map((vac) => (
             <Option key={vac.id} value={vac.id}>

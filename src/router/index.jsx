@@ -16,6 +16,7 @@ import Attendance from "../../pages/attendance";
 import Payments from "../../pages/payments";
 import Vacancies from "../../pages/vacancies";
 import Applications from "../../pages/applications";
+import Request from "../../pages/request";
 
 const index = () => {
   const router = createBrowserRouter(
@@ -39,6 +40,7 @@ const index = () => {
           <Route path="/payments" element={<Payments />} />
           <Route path="/vacancies" element={<Vacancies />} />
           <Route path="/application" element={<Applications />} />
+          <Route path="/leave-request" element={<Request />} />
         </Route>
       </Route>
     )
