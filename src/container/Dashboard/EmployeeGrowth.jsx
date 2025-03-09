@@ -11,25 +11,24 @@ import {
   Legend,
 } from "recharts";
 
-const employeeGrowthData = [
-  { month: "Jan", employees: 10 },
-  { month: "Feb", employees: 15 },
-  { month: "Mar", employees: 20 },
-  { month: "Apr", employees: 25 },
-  { month: "May", employees: 30 },
-  { month: "Jun", employees: 40 },
-];
+const EmployeeGrowth = () => {
+  const employeeGrowthData = [
+    { month: "Jan", employees: 10 },
+    { month: "Feb", employees: 15 },
+    { month: "Mar", employees: 20 },
+    { month: "Apr", employees: 25 },
+    { month: "May", employees: 30 },
+    { month: "Jun", employees: 40 },
+  ];
 
-const departmentData = [
-  { name: "Engineering", value: 40 },
-  { name: "Marketing", value: 25 },
-  { name: "HR", value: 15 },
-  { name: "Sales", value: 20 },
-];
+  const departmentData = [
+    { name: "Engineering", value: 40 },
+    { name: "Marketing", value: 25 },
+    { name: "HR", value: 15 },
+    { name: "Sales", value: 20 },
+  ];
 
-const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
-
-const EmployeeGrowthAndDepartmentDistribution = () => {
+  const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6  mt-6">
       <div className="p-10 bg-white rounded-lg shadow-lg">
@@ -79,4 +78,4 @@ const EmployeeGrowthAndDepartmentDistribution = () => {
   );
 };
 
-export default EmployeeGrowthAndDepartmentDistribution;
+export default EmployeeGrowth;

@@ -2,8 +2,8 @@ import React from "react";
 import Metrics from "./Metrics";
 import AbsenteeRateChart from "./AbsenteeRateChart";
 import TotalSalaryChart from "./TotalSalaryChart";
-import EmployeeGrowthAndDepartmentDistribution from "./employeeGrowthData";
 import UpcomingSalaryPayments from "./UpcomingPayments";
+import EmployeeGrowth from "./EmployeeGrowth";
 
 function General() {
   return (
@@ -17,7 +17,7 @@ function General() {
         <Metrics />
         <AbsenteeRateChart />
         <TotalSalaryChart />
-        <EmployeeGrowthAndDepartmentDistribution />
+        <EmployeeGrowth />
         <UpcomingSalaryPayments />
       </div>
     </div>
