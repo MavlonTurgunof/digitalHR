@@ -11,7 +11,7 @@ import Cookies from "js-cookie";
 
 function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
-  const [userName, setUserName] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [userNameError, setUserNameError] = useState("");
   const [passwordError, setPasswordError] = useState("");
@@ -33,7 +33,7 @@ function LoginPage() {
     setIsUserNameDirty(true);
     setIsPasswordDirty(true);
 
-    if (!userName) {
+    if (!email) {
       setUserNameError("login_name_error");
       hasError = true;
     }
@@ -49,21 +49,18 @@ function LoginPage() {
     if (hasError) return;
 
     const newData = {
-      username: userName,
+      email: email,
       password: password,
     };
 
     setButtonLoading(true);
     try {
-      const res = await Request.post("/accounts/user/login/", newData, {
+      const res = await Request.post("/user/login/", newData, {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
       });
-      if (res.data.user_type === "admin") {
-        Cookies.set("access_token", res?.data?.access);
-        navigate("/");
-      } else {
-        openNotification("error", "NoUser");
-      }
+
+      Cookies.set("access_token", res?.data?.access);
+      navigate("/");
     } catch (err) {
       openNotification("error", "errorMsg");
       console.error(err);
@@ -80,7 +77,7 @@ function LoginPage() {
   }, [navigate]);
 
   const handleUserNameChange = (e) => {
-    setUserName(e.target.value);
+    setEmail(e.target.value);
     if (isUserNameDirty) {
       if (e.target.value) {
         setUserNameError("");
@@ -127,7 +124,7 @@ function LoginPage() {
                   }`}
                   type="text"
                   placeholder="Login name"
-                  value={userName}
+                  value={email}
                   onChange={handleUserNameChange}
                 />
                 <FaRegUser className="text-[20px] absolute top-3 left-3 text-[#002B48]" />

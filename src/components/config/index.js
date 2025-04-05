@@ -2,7 +2,7 @@ import axios from "axios";
 import Cookies from "js-cookie";
 
 const request = axios.create({
-  baseURL: "https://api.repid.uz/api/v1",
+  baseURL: "http://95.130.227.13/api/v1",
 });
 
 request.interceptors.request.use((config) => {
