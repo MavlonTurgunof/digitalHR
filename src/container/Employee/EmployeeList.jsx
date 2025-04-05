@@ -45,14 +45,6 @@ function EmployeeList() {
     },
     {
       image: "./img/profilePic.jpg",
-      fullName: "Mavlon Turgunov",
-      jobTitle: "Software Engineer",
-      department: "IT",
-      empId: "00012222",
-      joined: "01.15.2021",
-    },
-    {
-      image: "./img/profilePic.jpg",
       fullName: "David Smith",
       jobTitle: "Accountant",
       department: "Finance",
